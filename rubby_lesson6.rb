@@ -739,4 +739,63 @@ puts "Wartosc max1: #{max1} oraz max2: #{max2}"
 =end
 
 
+#zad.14
+
+=begin
+numbers = [200, 900, 2, 300, 1000, 5]
+sorted= numbers.clone
+sorted.sort! {|x, y| y <=> x}
+
+
+
+max1=sorted[0]
+max2=sorted[1]
+
+indexOfMaxValue= numbers.find_index(max1)
+indexOfMaxValue2= numbers.find_index(max2)
+
+#puts "Indeksy te to: index1=#{indexOfMaxValue} oraz index2=#{indexOfMaxValue2}"
+
+counter =0
+for i in (0..numbers.count-1)
+    if (i>indexOfMaxValue2 && i<indexOfMaxValue)
+        puts "#{numbers[i]}"
+    end
+end
+
+=end
+
+
+#zad.15
+=begin
+numbers = [200, 900, 2, 300, 1000, 5, 60, 12, 88,62]
+
+#include index
+minIndex =1
+
+#exclude index
+maxIndex =5
+
+clonedTable = numbers.clone.slice(minIndex,maxIndex-minIndex)
+
+max=clonedTable.max
+#puts clonedTable
+puts "Max: #{max}"
+=end
+
+#zad.16 dokończyć
+
+numbers = [200, 900, 2, 300, 1000, 5, 60, 12, 88,62]
+
+globalMax= numbers.max
+puts "Global max: #{globalMax}"
+
+
+#include index
+minIndex =1
+
+#exclude index
+maxIndex =5
+
+clonedTable = numbers.clone.slice(minIndex,maxIndex-minIndex)
 
