@@ -783,13 +783,12 @@ max=clonedTable.max
 puts "Max: #{max}"
 =end
 
-#zad.16 dokończyć
-
-numbers = [200, 900, 2, 300, 1000, 5, 60, 12, 88,62]
+#zad.16
+=begin
+numbers = [200, 900, 2, 24, 23, 5, 60, 12, 88,1000]
 
 globalMax= numbers.max
 puts "Global max: #{globalMax}"
-
 
 #include index
 minIndex =1
@@ -799,3 +798,14 @@ maxIndex =5
 
 clonedTable = numbers.clone.slice(minIndex,maxIndex-minIndex)
 
+isMaxNumberAvailable=false
+
+for i in (0..clonedTable.count-1)
+    if (clonedTable[i]==globalMax)
+        isMaxNumberAvailable=true
+    end
+end
+
+puts "Globalna wartosc jest dostępna: #{isMaxNumberAvailable} w przedziale indexow: od #{minIndex} do #{maxIndex-1}"
+
+=end
