@@ -809,3 +809,147 @@ end
 puts "Globalna wartosc jest dostępna: #{isMaxNumberAvailable} w przedziale indexow: od #{minIndex} do #{maxIndex-1}"
 
 =end
+
+
+=begin
+# zad.1
+tab = [1, 2, 3, 4, 5, 6, 7, 8]
+counter=0
+
+
+tab.each do |item|
+    if (item % 2 == 0)
+      counter += 1
+    end
+end
+
+puts "Liczba parzystych elmentów to: #{counter}"
+=end
+
+
+#zad. 2
+=begin
+#zad. 2
+
+number = 496
+sum= 0
+
+for i in (1..number)
+    if (number % i == 0 && i != number)
+        sum += i
+    end
+end
+
+if (sum == number)
+    puts "Liczba #{number} jest doskonala"
+else
+    puts "Liczba #{number} nie jest doskonala"
+end
+=end
+
+
+#zad. 3
+=begin
+numbers = [-1, -2, -3, -4, 5, 6, 7, 8]
+
+negNumbers= []
+posNumbers =[]
+
+
+
+numbers.each do |number|
+    if (number >=  0)
+      posNumbers.push(number)
+    else
+        negNumbers.push(number)
+    end
+end
+
+
+puts "Numbery negatywne to: #{negNumbers}"
+puts "Numbery pozytywne to: #{posNumbers}"
+
+=end
+
+#zad. 4
+=begin
+A=1
+n=10
+sum=1
+
+for i in (1..n)
+    var = ((-1)**i)*A*i
+    sum += var
+    #puts "Var: #{var}"
+    #puts sum
+end
+
+puts "Result: #{sum}"
+=end
+
+
+#zad. 5
+
+=begin
+def absolute_value(x)
+    return x if x >= 0
+    return -x if x < 0
+end
+
+
+numbers = [1.2, 1.3,1.33, 1.333,1.334,1.5]
+
+number = 1.3336
+
+closesValue = numbers[0]
+closesNumberAbsoluteValue = absolute_value(closesValue-number)
+
+
+for i in (1..numbers.count-1)
+    absoluteValue = absolute_value(numbers[i]-number)
+    if (absoluteValue < closesNumberAbsoluteValue)
+        closesValue= numbers[i]
+        closesNumberAbsoluteValue= absoluteValue
+    end
+end
+
+puts closesValue
+        
+=end
+
+
+
+#zad. 6
+
+=begin
+numbers = [-1, -2, -3, -4, 5, 6, 7, 8]
+
+oddNumbers= []
+
+
+numbers.each do |number|
+    if (number % 2 !=  0)
+      oddNumbers.push(number)
+    end
+end
+
+
+puts "Numery nieparzyste to: #{oddNumbers}"
+puts "Maksymalny nieparzysty element tablicy to #{oddNumbers.max}"
+
+=end
+
+#zad. 7
+=begin
+number = 6
+naturalDividers =[]
+for i in (1..number+1)
+    if (number % i == 0)
+        naturalDividers.push(i)
+    end
+end
+
+puts naturalDividers
+=end
+
+
